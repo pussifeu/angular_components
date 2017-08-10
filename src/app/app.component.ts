@@ -10,11 +10,11 @@ export class AppComponent {
   constructor() {
     this.value = '';
   }
-  changeValue (event) {
+  changeValue (event: any) {
     console.log('changeValue', event);
   }
 
-  saveValue (event) {
+  saveValue (event: any) {
     this.value = event;
     console.log('saveValue', event);
   }

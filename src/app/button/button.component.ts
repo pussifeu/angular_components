@@ -18,7 +18,7 @@ export class ButtonComponent implements OnInit {
   ngOnInit() {
   }
 
-  selectNumber (event, value: number) {
+  selectNumber (value: number) {
     if (typeof (value) === 'number') {
       if (this.value.length < 4) {
         this.value = this.value.toString() + value.toString();
@@ -27,7 +27,7 @@ export class ButtonComponent implements OnInit {
     }
   }
 
-  selectAction (event, action: string) {
+  selectAction (action: string) {
     if (action === 'cancel') {
       this.value = this.value.slice(0, this.value.length - 1);
       this.onChangeBtnValue.emit(this.value);

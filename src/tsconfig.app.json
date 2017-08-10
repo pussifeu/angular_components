@@ -1,13 +1,28 @@
 {
   "extends": "../tsconfig.json",
   "compilerOptions": {
-    "outDir": "../out-tsc/app",
+    "outDir": "dist-app",
     "baseUrl": "./",
+    "declaration": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "stripInternal": true,
     "module": "es2015",
-    "types": []
+    "skipLibCheck": true,
+    "types": [],
+    "paths": {
+      "@angular/core": ["../node_modules/@angular/core"],
+      "rxjs/*": ["../node_modules/rxjs/*"]
+    }
+  },
+  "angularCompilerOptions": {
+    "strictMetadataEmit": true
   },
   "exclude": [
     "test.ts",
     "**/*.spec.ts"
+  ],
+  "files": [
+    "index.ts"
   ]
 }
