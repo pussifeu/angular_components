@@ -1,5 +1,5 @@
 export default {
-    entry: 'dist/index.js',
+    entry: 'dist/src/src/index.js',
     dest: 'dist/bundles/components.umd.js',
     sourceMap: false,
     format: 'umd',
